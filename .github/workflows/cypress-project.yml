@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'cypress-project/**.js'
-      - 'cypress-project/**.json'
-      - 'cypress-project/**.yml'
+    # paths:
+    #   - 'cypress-project/**.js'
+    #   - 'cypress-project/**.json'
+    #   - 'cypress-project/**.yml'
 
 jobs:
   cypress-tests:
