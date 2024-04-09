@@ -3,7 +3,7 @@ name: Cypress Project
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - 'cypress-project/**.js'
       - 'cypress-project/**.json'
