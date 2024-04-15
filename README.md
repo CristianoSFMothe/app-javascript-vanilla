@@ -68,9 +68,8 @@ Feature: Image Registration
 
 ```
 
-## Integração com o GitHub Actions
-
-Para realizar a integração com o GitHub Action e necessário primeiramente criar uma arquivo, `.yml`, dentro da seguinte estrutura:
+Integração com o GitHub Actions
+Para realizar a integração com o `GitHub Actions`, é necessário primeiro criar um arquivo `.yml` dentro da seguinte estrutura:
 
 ```
 ├── .github
@@ -80,7 +79,7 @@ Para realizar a integração com o GitHub Action e necessário primeiramente cri
 
 Com o seguinte código:
 
-```blash
+```yaml
 name: Cypress Project
 
 on:
@@ -115,7 +114,8 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 ```
-> A linha `CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}` configura a key do Cypress Cloud
+
+> A linha `CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}` configura a key do Cypress Cloud.
 
 ### Configura o Cypress Clound
 
@@ -199,6 +199,22 @@ npx cypress run --record --key {key}
 
 4. Criar uma variavél de ambiente dentro do `GitHub Actiions` no repositório
 
+* Clicar no botão `Settings`
 
+![image](https://github.com/CristianoSFMothe/app-javascript-vanilla/assets/68359459/457634c1-384b-41b7-a62f-d7f3d52f2e49)
 
+* Clicar na opção `Secrets and variables` e na opção `Actions`
 
+![image](https://github.com/CristianoSFMothe/app-javascript-vanilla/assets/68359459/980767b8-78ea-4a1c-91dd-e92a25893391)
+
+* Clicar em `New repository secret` e colocar o nome examente como informado no `Passo 3`
+
+```
+CYPRESS_RECORD_KEY : Com a chave informada
+````
+
+![image](https://github.com/CristianoSFMothe/app-javascript-vanilla/assets/68359459/88af314c-5cfe-453b-b128-0c28e569e38d)
+
+* Com isso teremos o `GitHub Actions` configurado com `Cypress Cloud`, e de acordo como foi realizado a `Actions` a mesma será executada
+
+![image](https://github.com/CristianoSFMothe/app-javascript-vanilla/assets/68359459/14f2d510-2950-4728-8cfd-0cea4fec4979)
