@@ -9,4 +9,5 @@ export default defineConfig({
     baseUrl: 'https://erickwendel.github.io/vanilla-js-web-app-example/',
     testIsolation: false
   },
+  projectId: "tdqo34",
 });
